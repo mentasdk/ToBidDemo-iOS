@@ -26,6 +26,17 @@
 }
 
 + (void)renderExpress:(WindMillNativeAd *)nativeAd adView:(NativeAdView *)adView {
+    CGSize screenSize = UIScreen.mainScreen.bounds.size;
+    CGRect adViewFrame = adView.frame;
+    
+    CGFloat aspectRatio = 9.0 / 16.0;
+    CGFloat height = screenSize.width * aspectRatio;
+    CGSize adSize = CGSizeMake(screenSize.width, height);
+    
+    adViewFrame.size = adSize;
+    adView.frame = adViewFrame;
+    adView.nativeAdView.frame = adView.bounds;
+    
     CGSize size = adView.nativeAdView.frame.size;
     [adView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.center.mas_equalTo(adView.superview);

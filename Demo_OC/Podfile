@@ -17,7 +17,7 @@ target 'Demo_OC' do
   # Pods for Demo_OC
   commonPods
   
-  pod 'ToBid-iOS-RC', '5.2.3', :subspecs => [
+  pod 'ToBid-iOS-RC', '5.3.0', :subspecs => [
     'BidResultAdapter',
     'CSJAdapter',
     'GromoreAdapter',
@@ -36,8 +36,8 @@ target 'Demo_OC' do
     'IronSourceAdapter',
     'QuMengAdapter',
     'AdScopeAdapter',
-]
-  
+  ]
+  pod 'ToBidMentaCNAdapter', :path => '../'
 
 end
 

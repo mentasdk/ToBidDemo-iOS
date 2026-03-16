@@ -22,7 +22,7 @@
     [self initTableApparance];
     [self initLogService];
     
-    [WindMillAds setupSDKWithAppId:@"16990" completionHandler:nil];
+    [WindMillAds setupSDKWithAppId:@"62597" completionHandler:nil];
     [WindMillAds setDebugEnable:YES];
     
     return YES;
